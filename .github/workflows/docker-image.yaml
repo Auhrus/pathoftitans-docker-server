@@ -5,13 +5,11 @@ on:
     branches: [ main ]
   pull_request:
     branches: [ main ]
-
+    
+    
 jobs:
-
   build:
-
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v3
     - name: docker login
@@ -21,7 +19,8 @@ jobs:
       run: |
         docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
     - name: docker image building
-      run: docker build ./ -t pathoftitans:v1
-   - name: docker push
+      run: |
+        docker build ./ -t pathoftitans:v1
+    - name: docker pushing
       run: |
         docker push auhruz/pathoftitans:v1
