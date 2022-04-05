@@ -1,4 +1,4 @@
-name: Build Docker Image
+name: Building Docker Image
 
 on:
   push:
@@ -14,5 +14,5 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag pathoftitans:$(date +%s)
+    - name: Build Docker image
+      run: docker build ./ -t PathofTitans:v1
