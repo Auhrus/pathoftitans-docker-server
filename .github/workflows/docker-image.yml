@@ -15,4 +15,4 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build Docker image
-      run: docker build ./ -t PathofTitans:v1
+      run: docker build ./ -t pathoftitans:v1
