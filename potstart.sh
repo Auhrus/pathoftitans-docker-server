@@ -4,9 +4,9 @@ CONTAINER_ALREADY_STARTED="CONTAINER_ALREADY_STARTED_PLACEHOLDER"
 if [ ! -e $CONTAINER_ALREADY_STARTED ]; then
     echo "Downloading Path of Titans Server"
 	wget https://launcher-cdn.alderongames.com/AlderonGamesCmd-Linux-x64
-    exec /opt/data/AlderonGamesCmd-Linux-x64 --game path-of-titans --server true --beta-branch $branch --install-dir ./ --username $username --password $password
+	chmod +x /opt/data/ -R
+    	./AlderonGamesCmd-Linux-x64 --game path-of-titans --server true --beta-branch $branch --install-dir ./ --username $username --password $password
 	touch /opt/data/$CONTAINER_ALREADY_STARTED
-	exit 0
 else
     chmod 777 /opt/data/ -R
     echo "Starting Path of Titans Server"
