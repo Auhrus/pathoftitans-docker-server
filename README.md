@@ -1,6 +1,6 @@
 # Path of Titans-Server 🦖
 
-This image provides a Path of Titans server. After the first start it downloads the necessary files from the Alderon Games servers. If there is an update to the server files, simply rebuild the container without having to re-download the image. It will download everything again and the show can go on.
+This image provides a Path of Titans server. After the first start it downloads the necessary files from the Alderon Games servers. If there is an update to the server files, simply recreate the container without having to re-download the image. It will download everything again (just in new) and the show can go on.
 ## Inhalt🧾
 
 * [Deployment👩‍💻](https://github.com/Auhruz/pathoftitans-docker-server#deployment)
@@ -54,7 +54,7 @@ docker stop CONAINER_NAME && docker rm CONAINER_NAME
 
 ## Official Documentation📖
 
-Here you can find the Official Alderdeon Games Documentation for more settings, mods, etc.
+Here you can find the Official Alderon Games Documentation for more settings, mods, etc.
 
 [Complete Alderon Games Documentation](https://github.com/Alderon-Games/pot-community-servers/wiki/Hosting-on-your-own-hardware)
 ## Support❤️
