@@ -3,11 +3,11 @@
 This image provides a Path of Titans server. After the first start it downloads the necessary files from the Alderon Games servers. If there is an update to the server files, simply recreate the container without having to re-download the image. It will download everything again (just in new) and the show can go on.
 ## Inhalt🧾
 
-* [Deployment👩‍💻](https://github.com/Auhruz/pathoftitans-docker-server#deployment)
-* [Environment Variables🔢](https://github.com/Auhruz/pathoftitans-docker-server#environment-variables)
-* [Update⏫](https://github.com/Auhruz/pathoftitans-docker-server#update)
-* [Official Documentation📖](https://github.com/Auhruz/pathoftitans-docker-server#original-documentation)
-* [Support❤️](https://github.com/Auhruz/pathoftitans-docker-server#support)
+* [Deployment👩‍💻](https://github.com/Auhrus/pathoftitans-docker-server#deployment)
+* [Environment Variables🔢](https://github.com/Auhrus/pathoftitans-docker-server#environment-variables)
+* [Update⏫](https://github.com/Auhrus/pathoftitans-docker-server#update)
+* [Official Documentation📖](https://github.com/Auhrus/pathoftitans-docker-server#original-documentation)
+* [Support❤️](https://github.com/Auhrus/pathoftitans-docker-server#support)
 
 ## Deployment👩‍💻
 
@@ -50,7 +50,7 @@ How do i update my Path of Titans Server to a newer Version.
 ```bash
 docker stop CONAINER_NAME && docker rm CONAINER_NAME
 ```
-2. Them create him again like in the [Deployment👩‍💻](https://github.com/Auhruz/pathoftitans-docker-server#deployment)
+2. Them create him again like in the [Deployment👩‍💻](https://github.com/Auhrus/pathoftitans-docker-server#deployment)
 
 ## Official Documentation📖
 
@@ -60,4 +60,4 @@ Here you can find the Official Alderon Games Documentation for more settings, mo
 ## Support❤️
 
 If you find any bugs have improvements for this Documentation or have any other suggestions/improvement, please post a bug report or feature suggestion in the 
-[Issues Tab](https://github.com/Auhruz/pathoftitans-docker-server/issues).
+[Issues Tab](https://github.com/Auhrus/pathoftitans-docker-server/issues).
