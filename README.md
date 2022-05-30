@@ -16,7 +16,7 @@ How to install this Docker Container
 1. Install Docker on your Server. Here is a guide [here](https://duckduckgo.com/?t=ffab&q=How+to+install+Docker+on+Ubuntu)
 2. Run that command
 ```bash
-docker run -p 7777:7777/udp -v VOLUME_NAME:/opt/data/PathOfTitans/Saved -e username=ALDERON_MAILADDRESS -e password=ALDERON_PASSWORD -e guid=GUID --name CONAINER_NAME ghcr.io/auhruz/pathoftitans:latest
+docker run -p 7777:7777/udp -v VOLUME_NAME:/opt/data/PathOfTitans/Saved -e username=ALDERON_MAILADDRESS -e password=ALDERON_PASSWORD -e guid=GUID --name CONAINER_NAME ghcr.io/auhrus/pathoftitans:latest
 ```
 Please replace all things written in CAPS.
 
