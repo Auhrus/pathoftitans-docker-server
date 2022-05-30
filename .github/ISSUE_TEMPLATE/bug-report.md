@@ -7,16 +7,16 @@ assignees: ''
 
 ---
 
-**Describe the error as best you can**.
+**Describe the error as best you can**
 
 
-**How to reproduce it (if it is)**.
+**How to reproduce it (if it is)**
 1. 
 
 **What should actually happen**
 
 
-**Have you tried re-downloading/re-setting up the image yet?
+**Have you tried re-downloading/re-setting up the image yet?**
 
 
 **Specs**
