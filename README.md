@@ -31,7 +31,7 @@ docker restart CONAINER_NAME
 To run this project, you will need to set the following environment variables.
 The ones without content are mandatory.
 
-| Variable      | Function      | Standard |
+| Variable      | Function      | Default |
 |:------------- |:-------------:|:-------------|
 | `username`   |Put here your Alderon games mail address.|--|
 | `password`   |Put here your Alderon password.|--|
@@ -44,7 +44,7 @@ The ones without content are mandatory.
 
 ## Update⏫
 
-How do i update my Path of Titans Server to a newer Version.
+How do i update my Path of Titans Server to a newer Version?
 
 1. First stop and remove the existing Container.
 ```bash
@@ -59,5 +59,5 @@ Here you can find the Official Alderon Games Documentation for more settings, mo
 [Complete Alderon Games Documentation](https://github.com/Alderon-Games/pot-community-servers/wiki/Hosting-on-your-own-hardware)
 ## Support❤️
 
-If you find any bugs have improvements for this Documentation or have any other suggestions/improvement, please post a bug report or feature suggestion in the 
+If you find any bugs have improvements for this Documentation or have any other suggestions/improvements, please post a bug report or feature suggestion in the 
 [Issues Tab](https://github.com/Auhrus/pathoftitans-docker-server/issues).
