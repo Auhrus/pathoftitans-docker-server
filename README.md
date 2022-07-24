@@ -1,7 +1,7 @@
-# Path of Titans-Server 🦖
+# Path of Titans Server 🦖
 
 This image provides a Path of Titans server. After the first start it downloads the necessary files from the Alderon Games servers. If there is an update to the server files, simply recreate the container without having to re-download the image. It will download everything again (just in new) and the show can go on.
-## Inhalt🧾
+## Content🧾
 
 * [Deployment👩‍💻](https://github.com/Auhrus/pathoftitans-docker-server#deployment)
 * [Environment Variables🔢](https://github.com/Auhrus/pathoftitans-docker-server#environment-variables)
