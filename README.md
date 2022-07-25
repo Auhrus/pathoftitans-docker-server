@@ -36,7 +36,7 @@ The ones without content are mandatory.
 | `username`   |Put here your Alderon games mail address.|--|
 | `password`   |Put here your Alderon password.|--|
 | `guid`       |"Globally Unique Identifier" this identifies the server in the Alderon Games server list. Here you can find a generator: [Find](https://duckduckgo.com/?q=random+guid&atb=v296-1&ia=answer)|--|
-| `branch`     |Here you can specify the branch which should be downloaded.|demo|
+| `branch`     |Here you can specify the branch which should be downloaded.|production|
 | `database`   |Here you can define if the server should use a local or remote database. For more information see: [Alderon Games Wiki](https://github.com/Alderon-Games/pot-community-servers/wiki/Hosting-on-your-own-hardware#database)|Local|
 | `port`       |Specifies the port of the game server. **IMPORTANT** it must be UDP!|7777|
 | `PATH`       |You can ignore this, it will be created automatically by the Ubuntu base.|/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin|
