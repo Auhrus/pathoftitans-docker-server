@@ -3,11 +3,11 @@
 This image provides a Path of Titans server. After the first start it downloads the necessary files from the Alderon Games servers. If there is an update to the server files, simply recreate the container without having to re-download the image. It will download everything again (just in new) and the show can go on.
 ## Content🧾
 
-* [Deployment👩‍💻](https://github.com/Auhrus/pathoftitans-docker-server#deployment)
-* [Environment Variables🔢](https://github.com/Auhrus/pathoftitans-docker-server#environment-variables)
-* [Update⏫](https://github.com/Auhrus/pathoftitans-docker-server#update)
+* [Deployment👩‍💻](https://github.com/Auhrus/pathoftitans-docker-server?tab=readme-ov-file#deployment)
+* [Environment Variables🔢](https://github.com/Auhrus/pathoftitans-docker-server?tab=readme-ov-file#environment-variables)
+* [Update⏫](https://github.com/Auhrus/pathoftitans-docker-server?tab=readme-ov-file#update)
 * [Official Documentation📖](https://github.com/Auhrus/pathoftitans-docker-server#original-documentation)
-* [Support❤️](https://github.com/Auhrus/pathoftitans-docker-server#support)
+* [Support❤️](https://github.com/Auhrus/pathoftitans-docker-server?tab=readme-ov-file#official-documentation)
 
 ## Deployment👩‍💻
 
