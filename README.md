@@ -16,11 +16,11 @@ How to install this Docker Container
 1. Install Docker on your Server. Here is a guide [here](https://duckduckgo.com/?t=ffab&q=How+to+install+Docker+on+Ubuntu)
 2. Run that command
 ```bash
-docker run -p 7777:7777/udp -v VOLUME_NAME:/opt/data/PathOfTitans/Saved -e username=ALDERON_MAILADDRESS -e password=ALDERON_PASSWORD -e guid=GUID --name CONAINER_NAME ghcr.io/auhrus/pathoftitans:latest
+docker run -p 7777:7777/udp -v VOLUME_NAME:/opt/data/PathOfTitans/Saved -e username="ALDERON_MAILADDRESS" -e password="ALDERON_PASSWORD" -e authtoken="AUTH_TOKEN" -e guid="GUID" --name CONAINER_NAME ghcr.io/auhrus/pathoftitans:latest
 ```
 Please replace all things written in CAPS.
 
-3. After all data has been downloaded, restart the container.
+3. After all data has been downloaded, the server will start.
 ```bash
 docker restart CONAINER_NAME
 ```
@@ -36,10 +36,17 @@ The ones without content are mandatory.
 | `username`   |Put here your Alderon games mail address.|--|
 | `password`   |Put here your Alderon password.|--|
 | `guid`       |"Globally Unique Identifier" this identifies the server in the Alderon Games server list. Here you can find a generator: [Find](https://duckduckgo.com/?q=random+guid&atb=v296-1&ia=answer)|--|
+| `authtoken`  |A user account is required to download and run the server. To obtain an Auth Token, you can generate one [here](https://github.com/Alderon-Games/pot-community-servers/wiki/Generate-AUTH-Token) via your account.|--|
 | `branch`     |Here you can specify the branch which should be downloaded.|production|
-| `database`   |Here you can define if the server should use a local or remote database. For more information see: [Alderon Games Wiki](https://github.com/Alderon-Games/pot-community-servers/wiki/Hosting-on-your-own-hardware#database)|Local|
 | `port`       |Specifies the port of the game server. **IMPORTANT** it must be UDP!|7777|
+| `database`   |Here you can define if the server should use a local or remote database. For more information see: [Alderon Games Wiki](https://github.com/Alderon-Games/pot-community-servers/wiki/Hosting-on-your-own-hardware#database)|Local|
+| `additionalcommands`|Additional start commands can be added here. (if necessary)|--|
 | `PATH`       |You can ignore this, it will be created automatically by the Ubuntu base.|/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin|
+
+The server start command:
+
+`su potserver -c "/opt/data/PathOfTitans/Binaries/Linux/PathOfTitansServer-Linux-Shipping -Port=$port -BranchKey=$branch -log -Username=$username -Password=$password -ServerGUID=$guid -Database=$database $additionalcommands"`
+
 
 
 ## Update⏫
@@ -50,7 +57,7 @@ How do i update my Path of Titans Server to a newer Version?
 ```bash
 docker stop CONAINER_NAME && docker rm CONAINER_NAME
 ```
-2. Them create him again like in the [Deployment👩‍💻](https://github.com/Auhrus/pathoftitans-docker-server#deployment)
+2. Them create him again like in the [Deployment👩‍💻](https://github.com/Auhrus/pathoftitans-docker-server?tab=readme-ov-file#deployment)
 
 ## Official Documentation📖
 
