@@ -22,7 +22,6 @@ term_handler(){
 trap 'term_handler' SIGTERM
 while true
 do
-	#sleep 1000 - Doesn't work with sleep. Not sure why.
 	tail -f /dev/null & wait ${!}
 done
 exit
