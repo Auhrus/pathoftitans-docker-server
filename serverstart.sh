@@ -15,9 +15,11 @@ su potserver -c "/opt/data/PathOfTitans/Binaries/Linux/PathOfTitansServer-Linux-
 
 term_handler(){
 	echo "***Stopping"
-	pkill --signal 2 --echo --uid 1000
-	wait
-	exit $?
+	pkill --signal 2 --echo PathOfTitans
+	while pgrep PathOfTitans; do
+		sleep 2
+	done
+	exit 0
 }
 trap 'term_handler' SIGTERM
 while true

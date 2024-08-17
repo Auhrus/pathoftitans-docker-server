@@ -12,6 +12,7 @@ ENV port="7777"
 ENV database="Local"
 ENV additionalcommands=""
 
+EXPOSE 7778 7780/tcp
 EXPOSE 7777/udp
 
 RUN apt update && apt install wget libcurl4 sudo -y && apt clean

@@ -16,7 +16,7 @@ How to install this Docker Container
 1. Install Docker on your Server. Here is a guide [here](https://duckduckgo.com/?t=ffab&q=How+to+install+Docker+on+Ubuntu)
 2. Run that command
 ```bash
-docker run -p 7777:7777/udp -v VOLUME_NAME:/opt/data/PathOfTitans/Saved -e username="ALDERON_MAILADDRESS" -e password="ALDERON_PASSWORD" -e authtoken="AUTH_TOKEN" -e guid="GUID" --name CONAINER_NAME ghcr.io/auhrus/pathoftitans:latest
+docker run -p 7778:7778/tcp -p 7780:7780/tcp -p 7777:7777/udp -v VOLUME_NAME:/opt/data/PathOfTitans/Saved -e username="ALDERON_MAILADDRESS" -e password="ALDERON_PASSWORD" -e authtoken="AUTH_TOKEN" -e guid="GUID" --name CONAINER_NAME ghcr.io/auhrus/pathoftitans:latest
 ```
 Please replace all things written in CAPS.
 
@@ -36,10 +36,10 @@ The ones without content are mandatory.
 | `username`   |Put here your Alderon games mail address.|--|
 | `password`   |Put here your Alderon password.|--|
 | `guid`       |"Globally Unique Identifier" this identifies the server in the Alderon Games server list. Here you can find a generator: [Find](https://duckduckgo.com/?q=random+guid&atb=v296-1&ia=answer)|--|
-| `authtoken`  |A user account is required to download and run the server. To obtain an Auth Token, you can generate one [here](https://github.com/Alderon-Games/pot-community-servers/wiki/Generate-AUTH-Token) via your account.|--|
+| `authtoken`  |A user account is required to download and run the server. To obtain an Auth Token, you can generate one [here](https://hosting.pathoftitans.wiki/setup/auth-token) via your account.|--|
 | `branch`     |Here you can specify the branch which should be downloaded.|production|
-| `port`       |Specifies the port of the game server. **IMPORTANT** it must be UDP!|7777|
-| `database`   |Here you can define if the server should use a local or remote database. For more information see: [Alderon Games Wiki](https://github.com/Alderon-Games/pot-community-servers/wiki/Hosting-on-your-own-hardware#database)|Local|
+| `port`       |Specifies the port of the game server.|7778/tcp - 7780/tcp - 7777/udp|
+| `database`   |Here you can define if the server should use a local or remote database. For more information see: [Alderon Games Wiki](https://hosting.pathoftitans.wiki/setup/server-setup#database)|Local|
 | `additionalcommands`|Additional start commands can be added here. (if necessary)|--|
 | `PATH`       |You can ignore this, it will be created automatically by the Ubuntu base.|/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin|
 
@@ -63,7 +63,7 @@ docker stop CONAINER_NAME && docker rm CONAINER_NAME
 
 Here you can find the Official Alderon Games Documentation for more settings, mods, etc.
 
-[Complete Alderon Games Documentation](https://github.com/Alderon-Games/pot-community-servers/wiki/Hosting-on-your-own-hardware)
+[Complete Alderon Games Documentation](https://hosting.pathoftitans.wiki/setup/server-setup)
 ## Support❤️
 
 If you find any bugs have improvements for this Documentation or have any other suggestions/improvements, please post a bug report or feature suggestion in the 
