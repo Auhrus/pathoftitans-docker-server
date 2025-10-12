@@ -16,15 +16,18 @@ How to install this Docker Container
 1. Install Docker on your Server. Here is a guide [here](https://duckduckgo.com/?t=ffab&q=How+to+install+Docker+on+Ubuntu)
 2. Run that command
 ```bash
-docker run -p 7778:7778/tcp -p 7780:7780/tcp -p 7777:7777/udp -v VOLUME_NAME:/opt/data/PathOfTitans/Saved -e username="ALDERON_MAILADDRESS" -e password="ALDERON_PASSWORD" -e authtoken="AUTH_TOKEN" -e guid="GUID" --name CONAINER_NAME ghcr.io/auhrus/pathoftitans:latest
+docker run -d -p 7778:7778/tcp -p 7780:7780/tcp -p 7777:7777/udp -v VOLUME_NAME:/opt/data/PathOfTitans/Saved -e username="ALDERON_MAILADDRESS" -e password="ALDERON_PASSWORD" -e authtoken="AUTH_TOKEN" -e guid="GUID" --name CONAINER_NAME ghcr.io/auhrus/pathoftitans:latest
 ```
 Please replace all things written in CAPS.
 
-3. After all data has been downloaded, the server will start.
+3. Once all data has been downloaded, you must create the `Game.ini` file under `YOUR_VOLUME/Config/LinuxServer/`, which you can use to configure the server according to your preferences.
+An overview of all setting options can be found: [here](https://hosting.pathoftitans.wiki/setup/server-configurations)
+
+4. Restart the Server
 ```bash
 docker restart CONAINER_NAME
 ```
-4. After that the Path of Titans server starts again it generates the save files, etc.
+5. The server should now start with your settings. Enjoy!
 
 ## Environment Variables🔢
 

@@ -1,7 +1,7 @@
 FROM ubuntu:latest
 
 LABEL maintainer="https://github.com/Auhrus"
-LABEL org.opencontainers.image.source https://github.com/auhrus/pathoftitans-docker-server
+LABEL org.opencontainers.image.source="https://github.com/auhrus/pathoftitans-docker-server"
 
 ENV username=""
 ENV password=""
@@ -15,13 +15,11 @@ ENV additionalcommands=""
 EXPOSE 7778 7780/tcp
 EXPOSE 7777/udp
 
-RUN apt update && apt install wget libcurl4 sudo -y && apt clean
-
-RUN wget -O libssl.deb http://archive.ubuntu.com/ubuntu/pool/main/o/openssl1.0/libssl1.0.0_1.0.2n-1ubuntu5.13_amd64.deb && dpkg -i libssl.deb && rm libssl.deb
+RUN apt update && apt install libcurl4 openssl wget -y && apt clean
 
 COPY ./serverstart.sh /opt/data/serverstart.sh
 
-RUN useradd potserver && chmod +x /opt/data/ -R && sed -i '17d' /etc/ssl/openssl.cnf
+RUN useradd potserver && chmod +x /opt/data/ -R
 
 WORKDIR /opt/data
 CMD ["./serverstart.sh"]
